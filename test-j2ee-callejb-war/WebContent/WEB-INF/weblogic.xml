@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE weblogic-web-app PUBLIC "-//BEA Systems, Inc.//DTD Web Application 8.1//EN" "http://www.bea.com/servers/wls810/dtd/weblogic810-web-jar.dtd">
+
+<weblogic-web-app>
+
+    <reference-descriptor>
+      <resource-description>
+        <res-ref-name>slee/SleeConnectionFactory</res-ref-name>
+        <jndi-name>RhinoSleeConnection</jndi-name>
+      </resource-description>
+
+      <ejb-reference-description>
+        <ejb-ref-name>ejb/AccountHome</ejb-ref-name>
+        <jndi-name>Account</jndi-name>
+      </ejb-reference-description>
+    </reference-descriptor>
+
+    <context-root>/slee</context-root>
+
+</weblogic-web-app>

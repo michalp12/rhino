@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE jboss PUBLIC "-//JBoss//DTD JBOSS 4.2//EN" "http://www.jboss.org/j2ee/dtd/jboss_4_2.dtd">
+
+<jboss>
+      <enterprise-beans>
+         <entity>
+            <ejb-name>Account</ejb-name>
+            <jndi-name>Account</jndi-name>
+            <configuration-name>Standard CMP 2.x EntityBean</configuration-name>
+            <invoker-bindings>
+               <invoker>
+                  <invoker-proxy-binding-name>iiop</invoker-proxy-binding-name>
+               </invoker>
+               <invoker>
+                  <invoker-proxy-binding-name>stateless-rmi-invoker</invoker-proxy-binding-name>
+               </invoker>
+            </invoker-bindings>
+         </entity>
+      </enterprise-beans>
+ </jboss>

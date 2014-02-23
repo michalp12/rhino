@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="rhino-j2ee-connector">
+        <wb-resource deploy-path="/" source-path="/connectorModule" tag="defaultRootSource"/>
+        <property name="java-output-path" value="/rhino-j2ee-connector/build/classes"/>
+    </wb-module>
+</project-modules>

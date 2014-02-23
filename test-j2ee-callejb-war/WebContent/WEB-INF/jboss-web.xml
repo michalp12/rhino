@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE jboss-web PUBLIC "-//JBoss//DTD Web Application 2.3V2//EN" "http://www.jboss.org/j2ee/dtd/jboss-web_3_2.dtd">
+
+<jboss-web>
+    <context-root>/slee</context-root>
+
+    <resource-ref>
+        <res-ref-name>slee/SleeConnectionFactory</res-ref-name>
+        <jndi-name>java:RhinoConnection</jndi-name>
+    </resource-ref>
+
+    <ejb-ref>
+        <ejb-ref-name>ejb/AccountHome</ejb-ref-name>
+        <jndi-name>Account</jndi-name>
+    </ejb-ref>
+</jboss-web>

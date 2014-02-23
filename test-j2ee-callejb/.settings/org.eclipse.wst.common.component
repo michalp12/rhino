@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="test-j2ee-callejb">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="test-j2ee-account-ejb.jar" deploy-path="/" handle="module:/resource/test-j2ee-account-ejb/test-j2ee-account-ejb">
+            <dependent-object>EjbModule_1393181098730</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="rhino-j2ee-connector.rar" deploy-path="/" handle="module:/resource/rhino-j2ee-connector/rhino-j2ee-connector">
+            <dependent-object>ConnectorModule_1393181098746</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="test-j2ee-callejb-war.war" deploy-path="/" handle="module:/resource/test-j2ee-callejb-war/test-j2ee-callejb-war">
+            <dependent-object>WebModule_1393181098754</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

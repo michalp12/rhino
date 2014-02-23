@@ -1,0 +1,11 @@
+<!DOCTYPE weblogic-connection-factory-dd PUBLIC '-//BEA Systems, Inc.//DTD WebLogic 8.1.0 Connector//EN' 'http://www.bea.com/servers/wls810/dtd/weblogic810-ra.dtd'>
+<weblogic-connection-factory-dd>
+  <connection-factory-name>Rhino SLEE Connnection</connection-factory-name>
+  <jndi-name>RhinoSleeConnection</jndi-name>
+
+  <map-config-property>
+    <map-config-property-name>endpoints</map-config-property-name>
+    <map-config-property-value>localhost:12345</map-config-property-value>
+  </map-config-property>
+
+</weblogic-connection-factory-dd>

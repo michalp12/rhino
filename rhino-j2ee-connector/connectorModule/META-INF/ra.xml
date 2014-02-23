@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connector xmlns="http://java.sun.com/xml/ns/j2ee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+           http://java.sun.com/xml/ns/j2ee/connector_1_5.xsd"
+           version="1.5">
+
+  <description>Rhino J2EE Connector Resource Adaptor</description>
+  <display-name>J2EE Connector Receiver</display-name>
+  <vendor-name>OpenCloud</vendor-name>
+  <eis-type>Rhino SLEE</eis-type>
+  <resourceadapter-version>2.1</resourceadapter-version>
+  <license>
+    <description>Commercial</description>
+    <license-required>true</license-required>
+  </license>
+    
+  <resourceadapter>
+    <outbound-resourceadapter>
+       <connection-definition>
+         <managedconnectionfactory-class>com.opencloud.slee.resources.connector.impl.ManagedConnectionFactoryImpl</managedconnectionfactory-class>
+         <config-property>
+         <description>Space- or comma- separated list of host:port elements to try to connect to the SLEE at</description>
+         <config-property-name>endpoints</config-property-name>
+         <config-property-type>java.lang.String</config-property-type>
+         </config-property>
+         <connectionfactory-interface>javax.slee.connection.SleeConnectionFactory</connectionfactory-interface>
+         <connectionfactory-impl-class>com.opencloud.slee.resources.connector.impl.SleeConnectionFactoryImpl</connectionfactory-impl-class>
+         <connection-interface>javax.slee.connection.SleeConnection</connection-interface>
+         <connection-impl-class>com.opencloud.slee.resources.connector.impl.SleeConnectionImpl</connection-impl-class>
+       </connection-definition>
+       <!-- This default (XATransaction) provides two-phase commit support.
+            NoTransaction and LocalTransaction may also be used depending on application requirements. -->
+       <transaction-support>XATransaction</transaction-support>
+
+       <reauthentication-support>false</reauthentication-support>
+    </outbound-resourceadapter>
+
+    <!-- Weblogic 10 doesn't accept security-permission tag anymore and rejects deployment
+         if it is specified -->
+    <!--security-permission>
+      <description>
+        This resource adapter needs to be able to connect to the SLEE
+        via a TCP socket, and retrieve the local host's network address
+        for use in generating globally-unique IDs.
+      </description>
+
+      <security-permission-spec>
+      </security-permission-spec>
+    </security-permission-->
+
+  </resourceadapter>
+</connector>
+
